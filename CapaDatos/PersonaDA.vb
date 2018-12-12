@@ -20,7 +20,7 @@ Public Class PersonaDA
             sqlcmd.CommandType = CommandType.StoredProcedure
             Dim PaTable As SqlDataReader = sqlcmd.ExecuteReader
             While PaTable.Read
-                Coleccion.Add(New Persona(PaTable.Item(0), PaTable.Item(1), PaTable.Item(2), PaTable.Item(3)))
+                Coleccion.Add(New Persona(PaTable.Item(0), PaTable.Item(1), PaTable.Item(2), PaTable.Item(3), PaTable.Item(4), PaTable.Item(5), PaTable.Item(6)))
             End While
             cnn.Close()
             cnn.Dispose()
