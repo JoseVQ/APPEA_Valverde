@@ -39,3 +39,9 @@ set @numero = (SELECT count(*)
 from Persona P 
 where p.Edad<=18)
 
+create or alter procedure SeleccionarDescripcion 
+@codEscuela int
+as
+
+select E.CodEscuela,E.Nombres,E.Apellidos,ES.Descripcion from ESTUDIANTE E inner join ESCUELA ES ON E.CodEscuela=ES.CodEscuela
+WHERE ES.CodEscuela=@codEscuela

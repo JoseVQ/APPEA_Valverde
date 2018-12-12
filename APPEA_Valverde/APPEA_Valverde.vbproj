@@ -149,8 +149,10 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="WebListadoEstudiantes.aspx" />
     <Content Include="WebListadoPersonas_18_2.aspx" />
     <Content Include="WebListarPersonas.aspx" />
+    <Content Include="WebRegistroEstudiantes.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -250,6 +252,13 @@
     <Compile Include="Site.Mobile.Master.designer.vb">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="WebListadoEstudiantes.aspx.designer.vb">
+      <DependentUpon>WebListadoEstudiantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebListadoEstudiantes.aspx.vb">
+      <DependentUpon>WebListadoEstudiantes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="WebListadoPersonas_18_2.aspx.designer.vb">
       <DependentUpon>WebListadoPersonas_18_2.aspx</DependentUpon>
     </Compile>
@@ -262,6 +271,13 @@
     </Compile>
     <Compile Include="WebListarPersonas.aspx.vb">
       <DependentUpon>WebListarPersonas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebRegistroEstudiantes.aspx.designer.vb">
+      <DependentUpon>WebRegistroEstudiantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebRegistroEstudiantes.aspx.vb">
+      <DependentUpon>WebRegistroEstudiantes.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
