@@ -20,6 +20,11 @@
                 <asp:BoundField DataField="edad" HeaderText="Edad" />
             </Columns>
         </asp:GridView>
+        <asp:Label ID="Label1" runat="server" Text="Personas Mayor de 18 Años : "></asp:Label>
+        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+        <br />
+        <asp:Label ID="Label3" runat="server" Text="Personas Menor de 18 Años : "></asp:Label>
+        <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
     </form>
 </body>
 </html>

@@ -18,4 +18,24 @@ select  P.Nombres + P.Apellidop + P.Apellidom as [Nombre y Apellido], P.Direccio
 from Persona P 
 where P.dni=@dni
 
-EXEC [pa_buscar_x_dni] '12345678'
+EXEC [pa_buscar_x_dni] '12345678';
+go;
+
+CREATE OR ALTER procedure [dbo].[pa_mayor]
+@numero int out
+as
+set @numero = (SELECT count(*) 
+from Persona P 
+where p.Edad>18);
+
+go;
+
+
+
+CREATE OR ALTER procedure [dbo].[pa_menor]
+@numero int out
+as
+set @numero = (SELECT count(*) 
+from Persona P 
+where p.Edad<=18)
+

@@ -49,5 +49,34 @@ Public Class PersonaDA
         Return ds
     End Function
 
+    Public Function Mayor() As Integer
+        Dim cnn As New SqlConnection(Conexion.Instancia.cadenaconexion)
+        cnn.Open()
+        Dim Sqlcmd As New SqlCommand("pa_mayor", cnn)
+        Sqlcmd.CommandType = CommandType.StoredProcedure
+        Sqlcmd.Parameters.Add("@numero", SqlDbType.Int)
+        Sqlcmd.Parameters("@numero").Direction = ParameterDirection.Output
+        Sqlcmd.ExecuteNonQuery()
+        Return Sqlcmd.Parameters("@numero").Value
+        cnn.Close()
+        cnn.Dispose()
+        Sqlcmd.Dispose()
+    End Function
+
+
+    Public Function Menor() As Integer
+        Dim cnn As New SqlConnection(Conexion.Instancia.cadenaconexion)
+        cnn.Open()
+        Dim Sqlcmd As New SqlCommand("pa_mayor", cnn)
+        Sqlcmd.CommandType = CommandType.StoredProcedure
+        Sqlcmd.Parameters.Add("@numero", SqlDbType.Int)
+        Sqlcmd.Parameters("@numero").Direction = ParameterDirection.Output
+        Sqlcmd.ExecuteNonQuery()
+        Return Sqlcmd.Parameters("@numero").Value
+        cnn.Close()
+        cnn.Dispose()
+        Sqlcmd.Dispose()
+    End Function
+
 
 End Class

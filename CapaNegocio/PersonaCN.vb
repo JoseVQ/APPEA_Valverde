@@ -17,4 +17,12 @@ Public Class PersonaCN
     Public Function FiltrarXdni(ByVal dni As String) As DataSet
         Return PersonaDA.Instancia.flitrarXdni(dni)
     End Function
+
+    Public Function Mayor() As Integer
+        Return PersonaDA.Instancia.Mayor()
+    End Function
+
+    Public Function Menor() As Integer
+        Return PersonaDA.Instancia.Menor()
+    End Function
 End Class

@@ -6,11 +6,15 @@ Public Class WebListadoPersonas_18_2
         If Not IsPostBack Then
             mostrar()
         End If
+
+
     End Sub
 
     Sub mostrar()
         Dim oPersona As New PersonaCN
         GridView1.DataSource = oPersona.ListarTodos
+        Label2.Text = oPersona.Mayor()
+        Label4.Text = oPersona.Menor()
         GridView1.DataBind()
     End Sub
 End Class
