@@ -78,5 +78,23 @@ Public Class PersonaDA
         Sqlcmd.Dispose()
     End Function
 
-
+    Public Function Agregar(ByVal Estudiante As Estudiante) As Boolean
+        Try
+            Dim cnn As New SqlConnection(Conexion.Instancia.cadenaconexion)
+            cnn.Open()
+            Dim Sqlcmd As New SqlCommand("pa_estudiante_agregar", cnn)
+            Sqlcmd.CommandType = CommandType.StoredProcedure
+            Sqlcmd.Parameters.Add("@codEstudiante", SqlDbType.VarChar, 40).Value = Estudiante.codEstudiante
+            Sqlcmd.Parameters.Add("@apellidos", SqlDbType.VarChar, 40).Value = Estudiante.apellidos
+            Sqlcmd.Parameters.Add("@nombres", SqlDbType.VarChar, 40).Value = Estudiante.nombres
+            Sqlcmd.Parameters.Add("@direccion", SqlDbType.VarChar, 40).Value = Estudiante.direccion
+            Sqlcmd.Parameters.Add("@codEscuela", SqlDbType.Int).Value = Estudiante.codEscuela
+            Sqlcmd.ExecuteNonQuery()
+            cnn.Close()
+            cnn.Dispose()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        Return True
+    End Function
 End Class

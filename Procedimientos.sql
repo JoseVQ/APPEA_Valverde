@@ -45,3 +45,15 @@ as
 
 select E.CodEscuela,E.Nombres,E.Apellidos,ES.Descripcion from ESTUDIANTE E inner join ESCUELA ES ON E.CodEscuela=ES.CodEscuela
 WHERE ES.CodEscuela=@codEscuela
+
+
+CREATE OR ALTER   procedure [dbo].[pa_estudiante_agregar]
+    @codEstudiante varchar(40),
+    @apellidos varchar(40),
+    @nombres varchar(40),
+    @direccion varchar(40),
+	@codEscuela int
+as
+  insert into ESTUDIANTE(CodEstudiante,Apellidos,Nombres,Direccion,CodEscuela)
+  values
+    (@codEstudiante,@apellidos,@nombres,@direccion,@codEscuela)

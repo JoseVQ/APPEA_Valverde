@@ -25,4 +25,8 @@ Public Class PersonaCN
     Public Function Menor() As Integer
         Return PersonaDA.Instancia.Menor()
     End Function
+
+    Public Function Insertar(ByVal estudiante As Estudiante) As Boolean
+        Return PersonaDA.Instancia.Agregar(estudiante)
+    End Function
 End Class
